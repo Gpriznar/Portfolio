@@ -43,12 +43,12 @@ body{
 }
 svg{
 	fill: currentcolor;
-	width: 15px;
-	height: 15px;
+	width: 25px;
+	height: 25px;
 }
 img.svg{
-	width: 15px;
-	height: 15px;
+	width: 25px;
+	height: 25px;
 }
 .edina_tm_wrapper_all,
 .edina_tm_section,
@@ -1437,6 +1437,8 @@ img.svg{
     font-family: "Montserrat";
     font-weight: 500;
     border-radius: 3px;
+		display: inline-grid;
+
 
    	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -1766,4 +1768,43 @@ img.svg{
 	.edina_tm_main_demos_list_wrap ul{margin-left: 0px;}
 	.edina_tm_main_demos_list_wrap ul li{width: 100%;padding: 0px;}
 	.container{padding: 0px 20px !important;}
+}
+
+/* Contact Tooltips */
+
+
+a.tooltips {
+    position: relative;
+    display: inline;
+}
+a.tooltips span {
+    position: absolute;
+    width:100px;
+    color: #FFFFFF;
+    background: #555555;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 3px;
+}
+a.tooltips span:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0; height: 0;
+    border-bottom: 8px solid #555555;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.8;
+    top: 30px;
+    left: 50%;
+		margin-top: 22px;
+    margin-left: -50px;
+    z-index: 999;
 }
